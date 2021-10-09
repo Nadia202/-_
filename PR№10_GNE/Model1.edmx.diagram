@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67dd2e9aa9ba416d8cc98f0d45c0332b" Name="Diagram1">
+        <EntityTypeShape EntityType="GNE_MuseumModel.Excursion" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNE_MuseumModel.Exhibits" Width="1.5" PointX="6.125" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNE_MuseumModel.Halls" Width="1.5" PointX="2.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNE_MuseumModel.Museum" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNE_MuseumModel.Staff" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GNE_MuseumModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="GNE_MuseumModel.FK_Excursion_Halls" ManuallyRouted="false" />
+        <AssociationConnector Association="GNE_MuseumModel.FK_Exhibits_Halls" ManuallyRouted="false" />
+        <AssociationConnector Association="GNE_MuseumModel.FK_Halls_Museum" ManuallyRouted="false" />
+        <AssociationConnector Association="GNE_MuseumModel.FK_Halls_Staff" ManuallyRouted="false" >
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

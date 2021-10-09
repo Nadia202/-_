@@ -1,0 +1,48 @@
+﻿<Window x:Class="PR_10_GNE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR_10_GNE"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="BtnAdd" Click="BtnAdd_Click">Добавить</Button>
+            <Button x:Name="BtnDelete" Click="BtnDelete_Click" Width="50">Удалить</Button>
+            <Button x:Name="BSort" Click="BSort_Click" Margin="10,0,0,0" Width="170">Сортировать по возрастанию</Button>
+            <Button x:Name="BSort1" Click="BSort1_Click" Margin="0,0,0,0" Width="170">Сортировать по убыванию</Button>
+            <TextBlock Height="16" Margin="30,0,0,0">Название:</TextBlock>
+            <TextBox x:Name="TextBoxName" Width="120" Height="16" Margin="10,0,0,0" TextChanged="TextBoxName_TextChanged"></TextBox>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="DataGridExhibits" ColumnWidth="*" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding type}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding age}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding cost}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Зал" Binding="{Binding Halls.name}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Фотография">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding imade}" Height="60"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnEdit" Click="BtnEdit_Click">Изменить</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
